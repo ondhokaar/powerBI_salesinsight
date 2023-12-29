@@ -1,0 +1,2 @@
+create table sales.transactions_flt like transactions;
+insert into	sales.transactions_flt select sales.transactions.* from sales.products join sales.transactions on sales.products.product_code = sales.transactions.product_code;
